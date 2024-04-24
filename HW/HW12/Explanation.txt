@@ -1,0 +1,6 @@
+We are trying to look for a MST in the house and wells graph and we also need to build it.
+So Kruskal's algorithm works here and we will utilize path compression and union find operation.
+We build the graph first and sort it because we will start with the edge with minimum weight.
+While the edge formed is less than the total amount of vertices - 1, we do the following:
+if the edge is united and doesn't form a cycle, we add the cost to the total and we increment edge processed.
+when we are done we return the total.
