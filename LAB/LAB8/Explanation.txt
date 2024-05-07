@@ -1,0 +1,22 @@
+In this problem, my initiate thought is a greedy method that 
+check the count of coins needed from the largest value of the coin available.
+However, this turned out to be a failure in an example like
+
+amount = 21, coins = [1, 7, 9]
+#If using the greedy method my answer would be 9+9+1+1+1 which is 5 coins but that is incorrect
+    because  7+7+7 = 21 and the correct answer is 3 coins.
+
+To start with a simple brute force solution recurrsively running every possible option in a tree would work
+but the time complexity would be O(n^m) for m being amount and that's horrific.
+
+After researching, we can approach the problem with dynamic programming.
+I choose bottom-up instead of Top-down to avoid recursion.
+
+We make an array to hold the least number of coins needed to make i's(index) amount
+We set the value of array starting from 1 to the end of array to max value or amount+1
+index 0 set to 0 because coins can't have 0 value and we can't count 0s as 0s will always be 0
+we check for every index of the array starting from 1 if the the coin value is less than the index number
+put the min value between the value held in the current index cell and the value of the cell [index - coin]
+[index - coin] holds the combination of the minimum coins needed to form the number. We update as we goes until we have process every possible combinations.
+Thanks to dynamic proramming, we avoid redundancies of checking the same combination 
+and the time complexity is O(n*m) for m being amount.
