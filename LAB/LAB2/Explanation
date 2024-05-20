@@ -1,0 +1,5 @@
+We have an array of chars which end up to have the same amount of chars in each string
+so we could either brute force sort and compare it or we could use a hash table
+we hash each char into the hash table increase the count of each unique char
+then we decrease the count of unique char by the second anagram 
+if the count is not = 0, either of them has more or less unique char count than the other
