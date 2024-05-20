@@ -1,0 +1,7 @@
+We have an array and we want to find the first bad version element in the array where [1,2,3,4 ... b,b,b,b,b,b... n-1]
+So we could do linear search or binary search
+Linear search would be a brute force for loop until found the first bad version element which has the time complexity of O(n)
+Binary Search is more efficient and we just take the middle of the current search range and see if its a bad version
+if its not, the first bad element is on the right side of the middle
+else it is on the left side
+Time complexity will be O(logn)
